@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<style>
+.openWindowExplorer{
+  padding:20px;
+  background: green;
+  color:#fff;
+}
+</style>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+jQuery('.openWindowExplorer').click(function(){
+
+    window.open('c:/windows');
+});
+var thisUserAccount;
+thisUserAccount= jQuery().SPServices.SPGetCurrentUser({
+    fieldName: "Name",
+    debug: false
+});
+alert(thisUserAccount);
+});
+</script>
+</head>
+
+<body>
+
+
+<button class="openWindowExplorer">Click Me!</button>
+
+</body>
+</html>
