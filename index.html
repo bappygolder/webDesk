@@ -14,15 +14,10 @@
 jQuery(document).ready(function(){
 jQuery('.openWindowExplorer').click(function(){
 
-    window.open('c:/windows');
+    window.open('c:/\windows');
 });
-var thisUserAccount;
-thisUserAccount= jQuery().SPServices.SPGetCurrentUser({
-    fieldName: "Name",
-    debug: false
 });
-alert(thisUserAccount);
-});
+
 </script>
 </head>
 
